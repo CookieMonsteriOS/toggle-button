@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Add your CSS styling here */
+        #toggleButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            background-color: gray; /* Default background color for "Off" state */
+            color: white;
+        }
+        #toggleButton.on {
+            background-color: green; /* Background color for "On" state */
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleButton" class="off">Off</button>
+    <script>
+        const toggleButton = document.getElementById('toggleButton');
+
+        // Add your JavaScript code here
+        toggleButton.addEventListener('click', () => {
+            toggleButton.classList.toggle('on');
+            toggleButton.innerText = toggleButton.classList.contains('on') ? 'On' : 'Off';
+        });
+    </script>
+</body>
+</html>
